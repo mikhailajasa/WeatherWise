@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherWise Full Stack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>WeatherWise</h1>
+      <p>A full stack weather assistant that gives weather, forecasts, travel tips, maps, history, and export tools.</p>
+      <p class="small">Built by: Mikhail Ajasa | Full Stack Technical Assessment</p>
+    </section>
+
+    <section class="card">
+      <h2>Check Weather</h2>
+      <form id="weatherForm">
+        <label for="city">Location</label>
+        <input type="text" id="city" placeholder="City, town, landmark, or postal code" />
+
+        <div class="two-columns">
+          <div>
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" />
+          </div>
+          <div>
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" />
+          </div>
+        </div>
+
+        <label for="activity">Activity</label>
+        <select id="activity">
+          <option value="general">General</option>
+          <option value="outdoor">Outdoor Activity</option>
+          <option value="driving">Driving</option>
+          <option value="school">School</option>
+          <option value="work">Work</option>
+        </select>
+
+        <div class="button-row">
+          <button type="submit">Get Weather</button>
+          <button type="button" id="currentLocationButton" class="secondary">Use Current Location</button>
+        </div>
+      </form>
+      <p id="errorMessage"></p>
+    </section>
+
+    <section id="resultCard" class="card result hidden">
+      <div class="result-header">
+        <div>
+          <h2 id="location"></h2>
+          <p id="description"></p>
+        </div>
+        <a id="mapLink" href="#" target="_blank" rel="noreferrer">Open Map</a>
+      </div>
+
+      <div class="weather-grid">
+        <div><strong id="temperature"></strong><span>Temperature</span></div>
+        <div><strong id="feelsLike"></strong><span>Feels Like</span></div>
+        <div><strong id="humidity"></strong><span>Humidity</span></div>
+        <div><strong id="windSpeed"></strong><span>Wind Speed</span></div>
+      </div>
+
+      <div class="recommendation">
+        <h3>Recommendation</h3>
+        <p id="recommendation"></p>
+      </div>
+
+      <div class="forecast">
+        <h3>5-Day Forecast</h3>
+        <div id="forecastList" class="forecast-list"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="history-header">
+        <h2>Recent Searches</h2>
+        <div class="history-actions">
+          <button id="historyButton" type="button" class="small-button">Refresh</button>
+          <button id="exportJsonButton" type="button" class="small-button">Export JSON</button>
+          <button id="exportCsvButton" type="button" class="small-button">Export CSV</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </section>
+
+    <section class="card info">
+      <h2>About Product Manager Accelerator</h2>
+      <p>The Product Manager Accelerator Program is designed to support PM professionals through every stage of their careers. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations. Our Product Manager Accelerator community are ambitious and committed. Through our program they have learnt, honed and developed new PM and leadership skills, giving them a strong foundation for their future endeavors.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
