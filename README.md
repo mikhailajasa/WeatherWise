@@ -55,7 +55,7 @@ npm install
 
 5. Create a `.env` file inside the backend folder and add:
 
-OPENWEATHER_API_KEY=your_api_key_here  
+OPENWEATHER_API_KEY=put your api key here  
 PORT=5000  
 
 6. Start the backend server:
